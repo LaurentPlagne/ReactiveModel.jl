@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 900 600">
+<title id="title">Definition, study data and numerical state</title><desc id="desc">ConstData holds a fixed mathematical definition and study payload by reference. Keep the payload read-only between rebuilds. A changing parameter point is an isbits value with one fixed concrete type. The definition, payload and point feed a private numerical workspace and persistent solver backend owned by one LinearProblem. After changing study data, rebuild every sharing problem before solving. Changed families or keys require a new definition and problem.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#475569"/></marker></defs>
+<style>text{font-family:system-ui,-apple-system,sans-serif;fill:#172b4d;font-size:22px}.small{font-size:18px}.head{font-size:24px;font-weight:650}.edge{fill:none;stroke:#475569;stroke-width:2.2;marker-end:url(#arrow)}.muted{fill:#475569}.mono{font-family:ui-monospace,monospace;font-size:20px}</style>
+<rect width="900" height="600" rx="14" fill="#ffffff"/>
+<rect x="30" y="25" width="840" height="195" rx="12" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="450" y="60" text-anchor="middle" class="head">ConstData · held by reference</text>
+<rect x="55" y="80" width="370" height="120" rx="10" fill="#f0f5fb" stroke="#94a3b8"/><text x="240.0" y="114" text-anchor="middle" class="head">ProblemDefinition</text><text x="240.0" y="147" text-anchor="middle" class="">Fixed families and keys</text><text x="240.0" y="176" text-anchor="middle" class="">Relations and objective</text>
+<rect x="450" y="80" width="395" height="120" rx="10" fill="#ecfdf5" stroke="#94a3b8"/><text x="647.5" y="114" text-anchor="middle" class="head">Study payload</text><text x="647.5" y="147" text-anchor="middle" class="">Arrays, dicts, structs</text><text x="647.5" y="176" text-anchor="middle" class="">Read-only between rebuilds</text>
+<rect x="315" y="275" width="570" height="205" rx="12" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="650" y="308" text-anchor="middle" class="head">LinearProblem</text>
+<path class="edge" d="M470 220V330"/>
+<text x="490" y="258" text-anchor="start" class="small">Read for formulas</text>
+<rect x="30" y="330" width="245" height="135" rx="10" fill="#f5f3ff" stroke="#94a3b8"/><text x="152.5" y="364" text-anchor="middle" class="head">Parameter point</text><text x="152.5" y="397" text-anchor="middle" class="">Values may change</text><text x="152.5" y="426" text-anchor="middle" class="">Same concrete type</text><text x="152.5" y="455" text-anchor="middle" class="">isbits value</text>
+<path class="edge" d="M275 397H335"/>
+<rect x="335" y="330" width="270" height="135" rx="10" fill="#f0f5fb" stroke="#94a3b8"/><text x="470.0" y="364" text-anchor="middle" class="head">Private workspace</text><text x="470.0" y="397" text-anchor="middle" class="">Bounds, matrix, RHS</text><text x="470.0" y="426" text-anchor="middle" class="">Objective + results</text>
+<path class="edge" d="M605 397H655"/>
+<rect x="655" y="330" width="210" height="135" rx="10" fill="#ecfdf5" stroke="#94a3b8"/><text x="760.0" y="364" text-anchor="middle" class="head">Backend</text><text x="760.0" y="397" text-anchor="middle" class="">Persistent</text><text x="760.0" y="426" text-anchor="middle" class="">solver model</text>
+<rect x="30" y="485" width="400" height="110" rx="10" fill="#fffbeb" stroke="#94a3b8"/><text x="230.0" y="519" text-anchor="middle" class="head">Study payload changes</text><text x="230.0" y="552" text-anchor="middle" class="">rebuild! before solving</text><text x="230.0" y="581" text-anchor="middle" class="">every sharing problem</text>
+<rect x="455" y="485" width="415" height="110" rx="10" fill="#fffbeb" stroke="#94a3b8"/><text x="662.5" y="519" text-anchor="middle" class="head">Families or keys change</text><text x="662.5" y="552" text-anchor="middle" class="">New definition + problem</text>
+</svg>

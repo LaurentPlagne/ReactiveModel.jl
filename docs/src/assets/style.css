@@ -1,0 +1,29 @@
+/* Keep wide reference tables usable on narrow screens. */
+#documenter .docs-main table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* Keep diagram labels readable; narrow screens can scroll the whole figure. */
+#documenter .docs-main .rm-diagram {
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 1.25rem 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.75rem;
+    background: #fff;
+}
+#documenter .docs-main .rm-diagram p {
+    margin: 0;
+}
+#documenter .docs-main .rm-diagram img {
+    display: block;
+    width: 100%;
+    min-width: 720px;
+    max-width: none;
+}
+#documenter .docs-main .rm-diagram:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 3px;
+}
