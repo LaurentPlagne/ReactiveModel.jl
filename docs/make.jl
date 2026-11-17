@@ -16,9 +16,10 @@ makedocs(
     remotes=nothing,
     format=Documenter.HTML(
         prettyurls=get(ENV, "CI", "false") == "true",
+        canonical="https://laurentplagne.github.io/ReactiveModel.jl/",
         assets=["assets/style.css"],
         edit_link=nothing,
-        repolink=nothing,
+        repolink="https://github.com/LaurentPlagne/ReactiveModel.jl",
     ),
     pages=[
         "Home" => "index.md",

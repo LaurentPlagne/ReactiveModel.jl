@@ -34,6 +34,8 @@ function check(mode::String)
         checker = joinpath(stage, "audit", "check-documentation-links.py")
         cp(joinpath(root, "audit", "check-documentation-links.py"), checker)
         run(`python3 $checker`)
+        # Retain the verified manual for local preview and the Pages artifact.
+        cp(joinpath(docs, "build"), joinpath(root, "docs", "build"); force=true)
     end
     return nothing
 end

@@ -1,5 +1,12 @@
 # ReactiveModel.jl
 
+[![CI](https://github.com/LaurentPlagne/ReactiveModel.jl/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/LaurentPlagne/ReactiveModel.jl/actions/workflows/ci.yml)
+[![Documentation](https://img.shields.io/badge/docs-manual-blue.svg)](https://laurentplagne.github.io/ReactiveModel.jl/)
+
+**[Read the documentation](https://laurentplagne.github.io/ReactiveModel.jl/)** ·
+[Getting started](https://laurentplagne.github.io/ReactiveModel.jl/tutorials/first-model/) ·
+[API reference](https://laurentplagne.github.io/ReactiveModel.jl/api/)
+
 ReactiveModel is an experimental Julia library for repeatedly solving a family
 of linear programs. You describe how bounds, matrix coefficients, right-hand
 sides and objective coefficients depend on study data and a parameter point.
@@ -113,6 +120,10 @@ execution plans, numerical storage and backend interfaces. The
 from warmed execution and examines reductions in business functions.
 
 ## Documentation and verification
+
+The [online manual](https://laurentplagne.github.io/ReactiveModel.jl/) is built and
+published from `main` after the CI tests and executable documentation pass.
+Its [Markdown sources](docs/src/index.md) are also available in this repository.
 
 Start with [installation](docs/src/installation.md) and the
 [first model](docs/src/tutorials/first-model.md). The manual also covers the

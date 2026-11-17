@@ -53,3 +53,28 @@ jobs:
           delete-old-caches: 'false'
       - name: Resolve and execute the manual and check local links
         run: julia --startup-file=no ci/check.jl docs
+      - name: Upload the verified manual
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs/build
+
+  deploy-docs:
+    name: Publish documentation
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: [test, docs]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Publish the manual
+        id: deployment
+        uses: actions/deploy-pages@v4
